@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_app/Widgets/MyText.dart';
+import 'package:my_first_app/Widgets/myIcon.dart';
+import 'package:my_first_app/Widgets/myImage.dart';
+import 'package:my_first_app/Widgets/myRichText.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -24,8 +27,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       backgroundColor: Colors.deepOrangeAccent[100],
-       body: SafeArea(
-         child: MyText(),
+       body: const SafeArea(
+         child: MyImage(),
        ),
     );
   }
