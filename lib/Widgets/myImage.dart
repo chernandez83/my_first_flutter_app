@@ -7,7 +7,7 @@ class MyImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Image(
       //image: AssetImage("assets/images/gatoborracho.webp"),
-      image: NetworkImage("https://www.animatedimages.org/data/media/209/animated-cat-image-0301.gif"),
+      image: const NetworkImage("https://www.animatedimages.org/data/media/209/animated-cat-image-0301.gif"),
       width: 400,
       height: 500,
       fit: BoxFit.contain,
