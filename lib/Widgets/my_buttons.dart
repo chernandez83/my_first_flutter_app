@@ -61,6 +61,9 @@ class MyButtons extends StatelessWidget {
       onPressed: () {
         print("Click en OutlinedButton");
       },
+      onLongPress: () {
+        print("Click largo en OutlinedButton");
+      },
       child: Text(
         "Guardar",
       ),
