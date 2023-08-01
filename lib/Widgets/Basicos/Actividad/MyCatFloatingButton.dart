@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_app/Common/MyRouters.dart';
+import 'package:my_first_app/Pages/PlayListPage.dart';
 
 class MyCatFloatingActionButton extends StatelessWidget {
   const MyCatFloatingActionButton({super.key});
@@ -18,7 +20,15 @@ class MyCatFloatingActionButton extends StatelessWidget {
         ),
       ),*/
       onPressed: () {
-        print("Click en MyCatFloatingButton");
+        //print("Click en MyCatFloatingButton");
+        /*Navigator.push(context, MaterialPageRoute(
+            builder: (context) => const PlayListPage(),
+          ),
+        );*/
+        //Navigator.pop(context);
+        Navigator.popAndPushNamed(context, ROUTE_PLAYLIST);
+        // Removes all pages, leaving only the new one in the stack
+        //Navigator.pushNamedAndRemoveUntil(context, ROUTE_PLAYLIST, (route) => false);
       },
       child: const Icon(
         Icons.liquor,

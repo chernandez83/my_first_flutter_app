@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
 class MyCatAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const MyCatAppBar({super.key});
+  String title;
+  MyCatAppBar({super.key, this.title="borrachos.com"});
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: const Text(
-        "Borrachos.com",
+      title: Text(
+        title,
       ),
       titleTextStyle: const TextStyle(
         fontFamily: "BungeeSpice",

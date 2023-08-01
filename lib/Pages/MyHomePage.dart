@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_app/Common/HomeArguments.dart';
 import 'package:my_first_app/Widgets/Basicos/Actividad/MyCatAppBar.dart';
 import 'package:my_first_app/Widgets/Basicos/Actividad/MyCatFloatingButton.dart';
 import 'package:my_first_app/Widgets/Basicos/Actividad/MyCatImage.dart';
@@ -11,9 +12,9 @@ import 'package:my_first_app/Widgets/Basicos/my_buttons.dart';
 import 'package:my_first_app/Widgets/Basicos/my_floating_action_button.dart';
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+  const MyHomePage({super.key, this.title});
 
-  final String title;
+  final String? title;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -30,20 +31,27 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    HomeArguments args;
+    try {
+      args = ModalRoute.of(context)!.settings.arguments as HomeArguments;
+    }
+    catch (e) {
+      args = HomeArguments("borrachos.catch", "Prueba");
+    }
 
     return Scaffold(
       backgroundColor: Colors.deepOrangeAccent[100],
       //floatingActionButton: const MyCatFloatingActionButton(),
       floatingActionButton: const Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           MyCatFloatingActionButton(),
-          MyCatFloatingActionButton(),
-          MyCatFloatingActionButton(),
+          //MyCatFloatingActionButton(),
+          //MyCatFloatingActionButton(),
         ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
-      appBar: const MyCatAppBar(),
+      appBar: MyCatAppBar(title: args.title),
       body: const SafeArea(
         child: Center(
           child: MyCatImage(),
