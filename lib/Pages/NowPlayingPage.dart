@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_app/Common/HomeArguments.dart';
+import 'package:my_first_app/Common/MyRouters.dart';
 import 'package:my_first_app/Pages/MyHomePage.dart';
+import 'package:my_first_app/Widgets/MultiChild/Actividad/NowPlayingWidget.dart';
 import 'package:my_first_app/Widgets/MultiChild/MyColumn.dart';
 import 'package:my_first_app/Widgets/MultiChild/MyRow.dart';
 import 'package:my_first_app/Widgets/MultiChild/MyStack.dart';
@@ -19,9 +22,9 @@ class NowPlayingPageState extends State<NowPlayingPage> {
         child: Center(
           child: SingleChildScrollView(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.end,
-              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.max,
               children: [
                 const Text(
                   "NowPlayingPage",
@@ -37,13 +40,14 @@ class NowPlayingPageState extends State<NowPlayingPage> {
                     ),
                   ),
                   onPressed: () => {
-                    Navigator.push(context, MaterialPageRoute(
+                    /*Navigator.push(context, MaterialPageRoute(
                       builder: (context) => const MyHomePage(title: "Hola",),
                     )
-                    ),
+                    ),*/
+                    Navigator.pushNamed(context, ROUTE_HOME, arguments: HomeArguments('Borrachera', 'Hola')),
                   },
                 ),
-                const MyStack(),
+                const NowPlaying(),
               ],
             ),
           ),

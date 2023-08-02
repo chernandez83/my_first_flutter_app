@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_app/Common/MyRouters.dart';
 import 'package:my_first_app/Pages/NowPlayingPage.dart';
 
 class PlayListPage extends StatefulWidget {
@@ -31,10 +32,11 @@ class PlayListPageState extends State<PlayListPage> {
                   ),
                 ),
                 onPressed: () => {
-                  Navigator.push(context, MaterialPageRoute(
+                  /*Navigator.push(context, MaterialPageRoute(
                     builder: (context) => const NowPlayingPage(),
                   )
-                  ),
+                  ),*/
+                  Navigator.pushNamed(context, ROUTE_NOWPLAYING),
                 },
               ),
             ],
