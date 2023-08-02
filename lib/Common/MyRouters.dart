@@ -22,13 +22,33 @@ class MyRouters {
           alignment: Alignment.center,
         );
       case ROUTE_LOGIN:
-        return MaterialPageRoute(builder: (_) => LoginPage());
+        //return MaterialPageRoute(builder: (_) => LoginPage());
+        return PageTransition(
+          child: const LoginPage(),
+          type: PageTransitionType.fade,
+          settings: settings,
+        );
       case ROUTE_PLAYLIST:
-        return MaterialPageRoute(builder: (_) => PlayListPage());
+        //return MaterialPageRoute(builder: (_) => PlayListPage());
+        return PageTransition(
+          child: const PlayListPage(),
+          type: PageTransitionType.fade,
+          settings: settings,
+        );
       case ROUTE_NOWPLAYING:
-        return MaterialPageRoute(builder: (_) => NowPlayingPage());
+        //return MaterialPageRoute(builder: (_) => NowPlayingPage());
+        return PageTransition(
+          child: const NowPlayingPage(),
+          type: PageTransitionType.fade,
+          settings: settings,
+        );
       default:
-        return MaterialPageRoute(builder: (_) => LoginPage());
+        //return MaterialPageRoute(builder: (_) => LoginPage());
+        return PageTransition(
+          child: const LoginPage(),
+          type: PageTransitionType.fade,
+          settings: settings,
+        );
     }
   }
 }
