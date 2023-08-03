@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_app/Common/MyRouters.dart';
 import 'package:my_first_app/Pages/NowPlayingPage.dart';
+import 'package:my_first_app/Widgets/ListViewAndGridView/Items/MyCard.dart';
+import 'package:my_first_app/Widgets/ListViewAndGridView/Items/MyContainer.dart';
+import 'package:my_first_app/Widgets/ListViewAndGridView/Items/MyListTile.dart';
 
 class PlayListPage extends StatefulWidget {
   const PlayListPage({super.key});
@@ -39,6 +42,9 @@ class PlayListPageState extends State<PlayListPage> {
                   Navigator.pushNamed(context, ROUTE_NOWPLAYING),
                 },
               ),
+              const MyContainer(),
+              const MyCard(),
+              const MyListTile(),
             ],
           ),
         ),

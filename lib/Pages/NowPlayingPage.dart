@@ -18,6 +18,7 @@ class NowPlayingPageState extends State<NowPlayingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.deepOrange[50],
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
