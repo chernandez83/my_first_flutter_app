@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       onGenerateRoute: MyRouters.generateRoute,
-      initialRoute: ROUTE_PLAYLIST,
+      initialRoute: ROUTE_PLAYLISTALT,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrangeAccent),
         useMaterial3: true,

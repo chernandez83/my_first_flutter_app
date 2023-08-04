@@ -3,11 +3,13 @@ import 'package:my_first_app/Pages/LoginPage.dart';
 import 'package:my_first_app/Pages/MyHomePage.dart';
 import 'package:my_first_app/Pages/NowPlayingPage.dart';
 import 'package:my_first_app/Pages/PlayListPage.dart';
+import 'package:my_first_app/Pages/PlayListPageAlt.dart';
 import 'package:page_transition/page_transition.dart';
 
 const String ROUTE_HOME = '/home';
 const String ROUTE_LOGIN = '/login';
 const String ROUTE_PLAYLIST = '/playlist';
+const String ROUTE_PLAYLISTALT = '/playlistalt';
 const String ROUTE_NOWPLAYING = '/nowplaying';
 
 class MyRouters {
@@ -32,6 +34,13 @@ class MyRouters {
         //return MaterialPageRoute(builder: (_) => PlayListPage());
         return PageTransition(
           child: const PlayListPage(),
+          type: PageTransitionType.fade,
+          settings: settings,
+        );
+      case ROUTE_PLAYLISTALT:
+      //return MaterialPageRoute(builder: (_) => PlayListPage());
+        return PageTransition(
+          child: const PlayListPageAlt(),
           type: PageTransitionType.fade,
           settings: settings,
         );

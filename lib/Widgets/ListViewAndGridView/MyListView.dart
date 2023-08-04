@@ -28,8 +28,8 @@ class MyListViewState extends State<MyListView>{
       child: ListView.builder(
         shrinkWrap: true,
         reverse: false,
-        //scrollDirection: Axis.horizontal,
-        //physics: const NeverScrollableScrollPhysics(),
+        scrollDirection: Axis.vertical,
+        physics: const NeverScrollableScrollPhysics(),
         itemCount: sounds.length,
         itemBuilder: (context, index) {
           Sound sound = mySounds[index];
