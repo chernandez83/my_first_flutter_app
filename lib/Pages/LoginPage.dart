@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:my_first_app/Common/HomeArguments.dart';
 import 'package:my_first_app/Common/MyRouters.dart';
 import 'package:my_first_app/Pages/MyHomePage.dart';
+import 'package:my_first_app/Widgets/Forms/MyCheckbox.dart';
+import 'package:my_first_app/Widgets/Forms/MyDatePicker.dart';
+import 'package:my_first_app/Widgets/Forms/MyDropdownButton.dart';
+import 'package:my_first_app/Widgets/Forms/MyRadioButtons.dart';
+import 'package:my_first_app/Widgets/Forms/MySwitch.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -26,6 +31,9 @@ class LoginPageState extends State<LoginPage> {
                 ),
               ),
               ElevatedButton(
+                style: ButtonStyle(
+                  elevation: MaterialStateProperty.resolveWith<double>((states) => 15),
+                ),
                 child: const Text(
                   "MyHomePage",
                   style: TextStyle(
@@ -40,6 +48,11 @@ class LoginPageState extends State<LoginPage> {
                   Navigator.pushNamed(context, ROUTE_HOME, arguments: HomeArguments("Hola 2","Mensaje",)),
                 },
               ),
+              //const MyRadioButtons(),
+              //const MyCheckbox(),
+              //const MyDatePicker(),
+              const MyDropdownButton(),
+              const MySwitch(),
             ],
           ),
         ),

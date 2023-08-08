@@ -12,7 +12,7 @@ class MyAlbumCard extends StatelessWidget {
       shadowColor: Colors.deepOrangeAccent,
       clipBehavior: Clip.hardEdge,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(25),
+        borderRadius: BorderRadius.circular(15),
         side: const BorderSide(
           color: Colors.deepOrangeAccent,
           width: 5,
