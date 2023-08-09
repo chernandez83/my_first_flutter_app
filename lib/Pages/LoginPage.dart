@@ -5,8 +5,10 @@ import 'package:my_first_app/Pages/MyHomePage.dart';
 import 'package:my_first_app/Widgets/Forms/MyCheckbox.dart';
 import 'package:my_first_app/Widgets/Forms/MyDatePicker.dart';
 import 'package:my_first_app/Widgets/Forms/MyDropdownButton.dart';
+import 'package:my_first_app/Widgets/Forms/MyForm.dart';
 import 'package:my_first_app/Widgets/Forms/MyRadioButtons.dart';
 import 'package:my_first_app/Widgets/Forms/MySwitch.dart';
+import 'package:my_first_app/Widgets/Forms/MyTextField.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -20,40 +22,44 @@ class LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Text(
-                "Login Page",
-                style: TextStyle(
-                  fontSize: 40,
-                ),
-              ),
-              ElevatedButton(
-                style: ButtonStyle(
-                  elevation: MaterialStateProperty.resolveWith<double>((states) => 15),
-                ),
-                child: const Text(
-                  "MyHomePage",
+        child: SingleChildScrollView(
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text(
+                  "Login Page",
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 40,
                   ),
                 ),
-                onPressed: () => {
-                  /*Navigator.push(context, MaterialPageRoute(
+                ElevatedButton(
+                  style: ButtonStyle(
+                    elevation: MaterialStateProperty.resolveWith<double>((states) => 15),
+                  ),
+                  child: const Text(
+                    "MyHomePage",
+                    style: TextStyle(
+                      fontSize: 20,
+                    ),
+                  ),
+                  onPressed: () => {
+                    /*Navigator.push(context, MaterialPageRoute(
                       builder: (context) => const MyHomePage(),
                     )
                   ),*/
-                  Navigator.pushNamed(context, ROUTE_HOME, arguments: HomeArguments("Hola 2","Mensaje",)),
-                },
-              ),
-              //const MyRadioButtons(),
-              //const MyCheckbox(),
-              //const MyDatePicker(),
-              const MyDropdownButton(),
-              const MySwitch(),
-            ],
+                    Navigator.pushNamed(context, ROUTE_HOME, arguments: HomeArguments("Hola 2","Mensaje",)),
+                  },
+                ),
+                //const MyRadioButtons(),
+                //const MyCheckbox(),
+                //const MyDatePicker(),
+                //const MyDropdownButton(),
+                //const MySwitch(),
+                //const MyTextField(),
+                const MyForm(),
+              ],
+            ),
           ),
         ),
       ),
