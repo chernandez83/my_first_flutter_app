@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_app/Pages/LoginPage.dart';
+import 'package:my_first_app/Pages/LoginPageAlt.dart';
 import 'package:my_first_app/Pages/MyHomePage.dart';
 import 'package:my_first_app/Pages/NowPlayingPage.dart';
 import 'package:my_first_app/Pages/PlayListPage.dart';
@@ -8,6 +9,7 @@ import 'package:page_transition/page_transition.dart';
 
 const String ROUTE_HOME = '/home';
 const String ROUTE_LOGIN = '/login';
+const String ROUTE_LOGIN_ALT = '/loginalt';
 const String ROUTE_PLAYLIST = '/playlist';
 const String ROUTE_PLAYLISTALT = '/playlistalt';
 const String ROUTE_NOWPLAYING = '/nowplaying';
@@ -28,6 +30,13 @@ class MyRouters {
         return PageTransition(
           child: const LoginPage(),
           type: PageTransitionType.fade,
+          settings: settings,
+        );
+      case ROUTE_LOGIN_ALT:
+        return PageTransition(
+          child: const LoginPageAlt(),
+          type: PageTransitionType.scale,
+          alignment: Alignment.center,
           settings: settings,
         );
       case ROUTE_PLAYLIST:
