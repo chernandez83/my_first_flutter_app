@@ -13,10 +13,9 @@ import 'package:my_first_app/Widgets/Basicos/my_buttons.dart';
 import 'package:my_first_app/Widgets/Basicos/my_floating_action_button.dart';
 import 'package:my_first_app/Widgets/Menus/Fragments/MyHomeFragment.dart';
 import 'package:my_first_app/Widgets/Menus/Fragments/MyProfileFragment.dart';
+import 'package:my_first_app/Widgets/Menus/Fragments/MySettingsFragment.dart';
 import 'package:my_first_app/Widgets/Menus/MyBottomNavigationBar.dart';
 import 'package:my_first_app/Widgets/Menus/MyDrawer.dart';
-
-import '../Widgets/Menus/Fragments/MySettingsFragment.dart';
 
 class MyHomePageAlt extends StatefulWidget {
   const MyHomePageAlt({super.key});

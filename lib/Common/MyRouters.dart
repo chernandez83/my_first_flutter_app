@@ -17,7 +17,7 @@ const String ROUTE_PLAYLISTALT = '/playlistalt';
 const String ROUTE_NOWPLAYING = '/nowplaying';
 
 class MyRouters {
-  static Route<dynamic> generateRoute(RouteSettings settings) {
+  static Route<dynamic>? generateRoute(RouteSettings settings) {
     switch(settings.name) {
       case ROUTE_HOME:
         //return MaterialPageRoute(builder: (_) => MyHomePage());
@@ -70,13 +70,14 @@ class MyRouters {
           type: PageTransitionType.fade,
           settings: settings,
         );
-      /*default:
+      default:
         //return MaterialPageRoute(builder: (_) => LoginPage());
-        return PageTransition(
+        /*return PageTransition(
           child: const LoginPage(),
           type: PageTransitionType.fade,
           settings: settings,
         );*/
+        return null;
     }
   }
 }

@@ -13,13 +13,20 @@ class MyListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(sound.title, style: const TextStyle(fontSize: 25),),
-      subtitle: Text(sound.author, style: const TextStyle(fontSize: 17),),
+      title: Text(sound.title), //, style: const TextStyle(fontSize: 25),),
+      subtitle: Text(sound.author), //, style: const TextStyle(fontSize: 17),),
+      //leading: const Icon(Icons.favorite_outline),
+      leading: IconTheme(
+        data: Theme.of(context).primaryIconTheme,
+        child: const Icon(Icons.favorite_outline),
+      ),
       trailing: InkWell(
         onTap: () => myListViewKey.currentState?.remove(sound),
-        child: const Icon(Icons.close),
+        child: const Icon(
+          Icons.close,
+          color: Colors.blueGrey,
+        ),
       ),
-      leading: const Icon(Icons.favorite_outline),
       onTap: () => myListViewKey.currentState?.update(sound..title='Modificado', index),
       onLongPress: () {
         print('LongPress en ListTile');
