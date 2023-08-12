@@ -36,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
       args = ModalRoute.of(context)!.settings.arguments as HomeArguments;
     }
     catch (e) {
-      args = HomeArguments("borrachos.catch", "Prueba");
+      args = HomeArguments("borrachos.cat", "Prueba");
     }
 
     return Scaffold(
@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: const Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          MyCatFloatingActionButton(),
+          //MyCatFloatingActionButton(),
           //MyCatFloatingActionButton(),
           //MyCatFloatingActionButton(),
         ],

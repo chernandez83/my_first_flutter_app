@@ -17,12 +17,12 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       onGenerateRoute: MyRouters.generateRoute,
-      initialRoute: ROUTE_LOGIN_ALT,
+      initialRoute: ROUTE_HOMEALT,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrangeAccent),
         useMaterial3: true,
       ),
-      home: const LoginPage(),
+      //home: const LoginPage(),
     );
   }
 }

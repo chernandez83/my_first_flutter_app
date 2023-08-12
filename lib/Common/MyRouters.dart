@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:my_first_app/Pages/LoginPage.dart';
 import 'package:my_first_app/Pages/LoginPageAlt.dart';
 import 'package:my_first_app/Pages/MyHomePage.dart';
+import 'package:my_first_app/Pages/MyHomePageAlt.dart';
 import 'package:my_first_app/Pages/NowPlayingPage.dart';
 import 'package:my_first_app/Pages/PlayListPage.dart';
 import 'package:my_first_app/Pages/PlayListPageAlt.dart';
 import 'package:page_transition/page_transition.dart';
 
 const String ROUTE_HOME = '/home';
+const String ROUTE_HOMEALT = '/homealt';
 const String ROUTE_LOGIN = '/login';
 const String ROUTE_LOGIN_ALT = '/loginalt';
 const String ROUTE_PLAYLIST = '/playlist';
@@ -21,6 +23,14 @@ class MyRouters {
         //return MaterialPageRoute(builder: (_) => MyHomePage());
         return PageTransition(
           child: const MyHomePage(),
+          type: PageTransitionType.scale,
+          settings: settings,
+          alignment: Alignment.center,
+        );
+      case ROUTE_HOMEALT:
+      //return MaterialPageRoute(builder: (_) => MyHomePage());
+        return PageTransition(
+          child: const MyHomePageAlt(),
           type: PageTransitionType.scale,
           settings: settings,
           alignment: Alignment.center,
@@ -60,13 +70,13 @@ class MyRouters {
           type: PageTransitionType.fade,
           settings: settings,
         );
-      default:
+      /*default:
         //return MaterialPageRoute(builder: (_) => LoginPage());
         return PageTransition(
           child: const LoginPage(),
           type: PageTransitionType.fade,
           settings: settings,
-        );
+        );*/
     }
   }
 }
